@@ -1,0 +1,33 @@
+# Render Blueprint. For first deployment, manual Web Service setup is also supported.
+services:
+  - type: web
+    name: pdf-knowledge-assistant-api
+    runtime: python
+    plan: free
+    buildCommand: pip install uv && uv sync --no-dev
+    startCommand: uv run --no-sync uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_EMBEDDING_MODEL
+        value: gemini-embedding-001
+      - key: APP_ACCESS_TOKEN
+        sync: false
+  - type: web
+    name: pdf-knowledge-assistant-ui
+    runtime: python
+    plan: free
+    buildCommand: pip install uv && uv sync --no-dev
+    startCommand: uv run --no-sync python -m streamlit run frontend/app.py --server.address 0.0.0.0 --server.port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: APP_ACCESS_TOKEN
+        sync: false
+      - key: API_BASE_URL
+        sync: false

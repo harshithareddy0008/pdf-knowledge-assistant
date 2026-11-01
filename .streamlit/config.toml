@@ -1,0 +1,6 @@
+[theme]
+base = "light"
+primaryColor = "#3B68DB"
+[server]
+headless = true
+maxUploadSize = 8

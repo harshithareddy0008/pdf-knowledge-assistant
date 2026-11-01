@@ -1,0 +1,9 @@
+Create your own 1-page PDF containing these notes in Word or Google Docs, then upload it:
+
+Machine Learning Basics
+Supervised learning trains a model using labeled examples (inputs paired with correct outputs).
+Classification predicts categories, such as spam versus not spam.
+Regression predicts numeric values, such as a house price.
+Unsupervised learning finds structure in unlabeled data, such as clusters.
+
+Example question: According to the document, how is regression different from classification?
