@@ -125,3 +125,17 @@ RAG, chunking, embeddings, vector databases, semantic search, prompt grounding, 
 - [Gemini Embeddings](https://ai.google.dev/gemini-api/docs/embeddings)
 - [LangChain Chroma integration](https://python.langchain.com/docs/integrations/vectorstores/chroma/)
 - [Render FastAPI deployment](https://render.com/docs/deploy-fastapi)
+
+## RAG Application Testing
+
+Upload a sample Machine Learning PDF and ask:
+
+1. What is supervised learning?
+2. Explain classification and regression.
+3. What is the purpose of ChromaDB?
+4. How does the RAG pipeline work?
+
+Expected behavior:
+- Answers should be grounded in uploaded PDFs.
+- Relevant source pages should be displayed.
+- Unsupported questions should receive an honest fallback.
