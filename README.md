@@ -138,4 +138,4 @@ Upload a sample Machine Learning PDF and ask:
 Expected behavior:
 - Answers should be grounded in uploaded PDFs.
 - Relevant source pages should be displayed.
-- Unsupported questions should receive an honest fallback.
+- Unsupported questions should receive an honest fallback..
